@@ -1,3 +1,3 @@
 # SpecialItemPack
  
-A mod for Enter the Gungeon that adds new enemies, bosses and more.
+A mod for Enter the Gungeon that adds new items, bosses and more.
