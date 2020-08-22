@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53E74F6C-45E4-469F-B650-D3B819360213}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpecialItemPack</RootNamespace>
+    <AssemblyName>SpecialItemPack</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Documents\Mods_dependicas\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp.Base.mm">
+      <HintPath>D:\Documents\Mods_dependicas\Assembly-CSharp.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Mods_dependicas\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Items">
+      <HintPath>D:\Downloads\Items.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>D:\Documents\Mods_dependicas\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>D:\Documents\Mods_dependicas\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Mods_dependicas\PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule.Base.mm">
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.CoreModule.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Documents\Mods_dependicas\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivePlayerOrbital.cs" />
+    <Compile Include="AdaptedSynergyStuff\AdvancedCompanionSynergyProcessor.cs" />
+    <Compile Include="AdaptedSynergyStuff\AdvancedDualWieldSynergyProcessor.cs" />
+    <Compile Include="AdaptedSynergyStuff\AdvancedHoveringGunSynergyProcessor.cs" />
+    <Compile Include="AdaptedSynergyStuff\AdvancedInfiniteAmmoSynergyProcessor.cs" />
+    <Compile Include="AdaptedSynergyStuff\AdvancedTransformingGunSynergyProcessor.cs" />
+    <Compile Include="AdditionalCompanionOwner.cs" />
+    <Compile Include="AdvancedDungeonPrerequisite.cs" />
+    <Compile Include="AdvancedGameStats.cs" />
+    <Compile Include="AdvancedGunBehavior.cs" />
+    <Compile Include="AdvancedPlayerOrbitalItem.cs" />
+    <Compile Include="AdvancedStringDB.cs" />
+    <Compile Include="AegisGunController.cs" />
+    <Compile Include="AliveBullets.cs" />
+    <Compile Include="AmmoFlower.cs" />
+    <Compile Include="ArmorHeartFriendship.cs" />
+    <Compile Include="Backshot.cs" />
+    <Compile Include="BatLauncher.cs" />
+    <Compile Include="BigChamber.cs" />
+    <Compile Include="BigGunController.cs" />
+    <Compile Include="BlackGuonStone.cs" />
+    <Compile Include="BlueChamberController.cs" />
+    <Compile Include="BowBowController.cs" />
+    <Compile Include="BreachShrineController.cs" />
+    <Compile Include="ButterflyEnemy.cs" />
+    <Compile Include="CarBattery.cs" />
+    <Compile Include="CelebrationMk1.cs" />
+    <Compile Include="AdvancedGameStatsManager.cs" />
+    <Compile Include="ChamberSynthesizer.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ComfortableCarpet.cs" />
+    <Compile Include="CrownOfTheJammed.cs" />
+    <Compile Include="CustomCharacterSpecificGungeonFlags.cs" />
+    <Compile Include="CustomCreepyEyeController.cs" />
+    <Compile Include="CustomDungeonFlagsComparer.cs" />
+    <Compile Include="CustomGungeonFlags.cs" />
+    <Compile Include="CrimtaneAmmolet.cs" />
+    <Compile Include="CustomSuperReaperController.cs" />
+    <Compile Include="CustomValidTilesets.cs" />
+    <Compile Include="CustomTrackedMaximums.cs" />
+    <Compile Include="CustomTrackedMaximumsComparer.cs" />
+    <Compile Include="CustomTrackedStats.cs" />
+    <Compile Include="CustomTrackedStatsComparer.cs" />
+    <Compile Include="CustomUnlockableTest.cs" />
+    <Compile Include="CyberkineticSuperbattery.cs" />
+    <Compile Include="DarkGreenGuonStone.cs" />
+    <Compile Include="Decagun.cs" />
+    <Compile Include="DiamondGuonStone.cs" />
+    <Compile Include="EboniteAmmolet.cs" />
+    <Compile Include="ElevatorSwitch.cs" />
+    <Compile Include="EnemyWorks.cs" />
+    <Compile Include="EnterTheGungeon.cs" />
+    <Compile Include="EnterTheGungeonProjectile.cs" />
+    <Compile Include="EvoBullets.cs" />
+    <Compile Include="Fireworks.cs" />
+    <Compile Include="FlatBullets.cs" />
+    <Compile Include="FriendlyMirrorImageBehaviour.cs" />
+    <Compile Include="GiantsPlaytoyllets.cs" />
+    <Compile Include="GlassBullets.cs" />
+    <Compile Include="GlassChamber.cs" />
+    <Compile Include="GlassHeart.cs" />
+    <Compile Include="GreenChamberEyeController.cs" />
+    <Compile Include="GreenChamberItem.cs" />
+    <Compile Include="GrimShrine.cs" />
+    <Compile Include="GunFromTheLegend.cs" />
+    <Compile Include="GungeonAPI\dungeongen\DungeonHandler.cs" />
+    <Compile Include="GungeonAPI\dungeongen\DungeonHooks.cs" />
+    <Compile Include="GungeonAPI\dungeongen\OfficialFlows.cs" />
+    <Compile Include="GungeonAPI\dungeongen\RoomFactory.cs" />
+    <Compile Include="GungeonAPI\dungeongen\SampleFlow.cs" />
+    <Compile Include="GungeonAPI\dungeongen\StaticReferences.cs" />
+    <Compile Include="GungeonAPI\GungeonAPI.cs" />
+    <Compile Include="GungeonAPI\shrines\HitboxMonitor.cs" />
+    <Compile Include="GungeonAPI\shrines\ShrineFactory.cs" />
+    <Compile Include="GungeonAPI\shrines\SimpleInteractable.cs" />
+    <Compile Include="GungeonAPI\tools\FakePrefab.cs" />
+    <Compile Include="GungeonAPI\tools\FakePrefabHooks.cs" />
+    <Compile Include="GungeonAPI\tools\ResourceExtractor.cs" />
+    <Compile Include="GungeonAPI\tools\TextureStitcher.cs" />
+    <Compile Include="GungeonAPI\tools\Tools.cs" />
+    <Compile Include="GungeonCompass.cs" />
+    <Compile Include="GungeonWizardRing.cs" />
+    <Compile Include="HalfMirrorGuon.cs" />
+    <Compile Include="HDGun.cs" />
+    <Compile Include="HKPlaceable.cs" />
+    <Compile Include="HotDogController.cs" />
+    <Compile Include="HowToThrowGuns.cs" />
+    <Compile Include="IgnoreBehaviour.cs" />
+    <Compile Include="IgnoreRounds.cs" />
+    <Compile Include="InfinityController.cs" />
+    <Compile Include="InfluxBullets.cs" />
+    <Compile Include="InvisibleBullets.cs" />
+    <Compile Include="IPlantedYouSynergyProcessor.cs" />
+    <Compile Include="JunkansRevengeController.cs" />
+    <Compile Include="JunkArmor.cs" />
+    <Compile Include="JunkSwordController.cs" />
+    <Compile Include="JunkUp.cs" />
+    <Compile Include="KaliberAffliction.cs" />
+    <Compile Include="KeyOfChaosItem.cs" />
+    <Compile Include="KillTheWeakBehaviour.cs" />
+    <Compile Include="LichsFavoriteController.cs" />
+    <Compile Include="LichSlayer.cs" />
+    <Compile Include="LockonBullets.cs" />
+    <Compile Include="MagentaGuonStone.cs" />
+    <Compile Include="MagicBeans.cs" />
+    <Compile Include="MahogunySapling.cs" />
+    <Compile Include="MasterChamber.cs" />
+    <Compile Include="MasterExploder.cs" />
+    <Compile Include="MimicRainbowMiniguns1.cs" />
+    <Compile Include="MimigunController.cs" />
+    <Compile Include="MinigunStand.cs" />
+    <Compile Include="ModdedMagnetItem.cs" />
+    <Compile Include="Muscle.cs" />
+    <Compile Include="MysteriousChest.cs" />
+    <Compile Include="ItemAPI\FakePrefab.cs" />
+    <Compile Include="ItemAPI\FakePrefabHooks.cs" />
+    <Compile Include="ItemAPI\ItemBuilder.cs" />
+    <Compile Include="ItemAPI\ResourceExtractor.cs" />
+    <Compile Include="ItemAPI\SpriteBuilder.cs" />
+    <Compile Include="OcarinaOfTime.cs" />
+    <Compile Include="PalmSapling.cs" />
+    <Compile Include="ParadoxialBody.cs" />
+    <Compile Include="PastkillersPlan.cs" />
+    <Compile Include="PeashooterSeeds.cs" />
+    <Compile Include="PenetratingBullets.cs" />
+    <Compile Include="PhilosophersGuonStone.cs" />
+    <Compile Include="PickupChamberReplacementBehaviour.cs" />
+    <Compile Include="PointlessJunk.cs" />
+    <Compile Include="PokeballItem.cs" />
+    <Compile Include="PurpleChamberPickup.cs" />
+    <Compile Include="PurpleGuonStone.cs" />
+    <Compile Include="QuantumBullets.cs" />
+    <Compile Include="RagingBullets.cs" />
+    <Compile Include="RainbowmimicRewardPedestal.cs" />
+    <Compile Include="ReallySpecialGramophone.cs" />
+    <Compile Include="RedChamberDungeon.cs" />
+    <Compile Include="RedChamberGun.cs" />
+    <Compile Include="RedirectRounds.cs" />
+    <Compile Include="Relodelode.cs" />
+    <Compile Include="RingOfAmunition.cs" />
+    <Compile Include="RnGEnemyDatabase.cs" />
+    <Compile Include="RoundKing.cs" />
+    <Compile Include="ScaryRedChamberBehaviour.cs" />
+    <Compile Include="ScrollOfWonder.cs" />
+    <Compile Include="SequencerController.cs" />
+    <Compile Include="Shapeshifting\KingSlimeBehaviour.cs" />
+    <Compile Include="Shapeshifting\ShapeShiftBehaviour.cs" />
+    <Compile Include="Shapeshifting\ShrineShapeshifter.cs" />
+    <Compile Include="Shapeshifting\WallOfFleshBehaviour.cs" />
+    <Compile Include="ShelletahsHeart.cs" />
+    <Compile Include="ShieldOfGunkh.cs" />
+    <Compile Include="ShrineGorb.cs" />
+    <Compile Include="ShrinePrimalAspid.cs" />
+    <Compile Include="SoulOrbController.cs" />
+    <Compile Include="SpecialBlankModificationItem.cs" />
+    <Compile Include="SpecialChamberGunProcessor.cs" />
+    <Compile Include="SpecialDungeon.cs" />
+    <Compile Include="SpecialEnemies.cs" />
+    <Compile Include="SpecialGun.cs" />
+    <Compile Include="SpecialItemIds.cs" />
+    <Compile Include="SpecialItemModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialResources.cs" />
+    <Compile Include="SpecialRooms.cs" />
+    <Compile Include="SprenThing.cs" />
+    <Compile Include="AdvancedCustomShrineController.cs" />
+    <Compile Include="SreaperShrine.cs" />
+    <Compile Include="StoneJunk.cs" />
+    <Compile Include="StormEyeController.cs" />
+    <Compile Include="StraightBullets.cs" />
+    <Compile Include="SuperBatLauncher.cs" />
+    <Compile Include="SuperReapersScythe.cs" />
+    <Compile Include="SynergiesHub.cs" />
+    <Compile Include="SynergracingBullets.cs" />
+    <Compile Include="TableTechChaos.cs" />
+    <Compile Include="TableTechTableflip.cs" />
+    <Compile Include="TeslaCoil.cs" />
+    <Compile Include="ThingsYouCanTake.cs" />
+    <Compile Include="Toolbox.cs" />
+    <Compile Include="TrueHeroSwordController.cs" />
+    <Compile Include="UglyChest.cs" />
+    <Compile Include="UglyGun.cs" />
+    <Compile Include="Underflow.cs" />
+    <Compile Include="UnlockGreenChamberBehaviour.cs" />
+    <Compile Include="UnlockTest.cs" />
+    <Compile Include="UnluckyDice.cs" />
+    <Compile Include="WallDestroyer.cs" />
+    <Compile Include="WoodenGuon.cs" />
+    <Compile Include="YourselfBullets.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MysteriousChest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\KeyOfChaos_001.png" />
+    <EmbeddedResource Include="Resources\KeyOfChaos_002.png" />
+    <EmbeddedResource Include="Resources\KeyOfChaos_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SynergyBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\spren_idle_001.png" />
+    <EmbeddedResource Include="Resources\SprunBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GlassBullets.png" />
+    <EmbeddedResource Include="Resources\GlassHeart.png" />
+    <EmbeddedResource Include="Resources\glass_chamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\QuantumBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Purple_ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PenetratingBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\InvisibleBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AliveBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GungeonCompass.png" />
+    <EmbeddedResource Include="Resources\GungeonCompassArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RagingBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\WoodenGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GuonOrbitals\BlackGuonStoneOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonOrbitals\DarkGreenGuonStoneOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonOrbitals\DiamondGuonStoneOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonOrbitals\MagentaGuonStoneOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonOrbitals\PurpleGuonStoneOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonOrbitals\WoodenGuonStoneOrbital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DiamondGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MagentaGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DarkGreenGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PurpleGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BlackGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GuonOrbitals\HalfMirrorGuonStoneOrbital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HalfMirrorGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GuonOrbitals\PhilosophersGuonStoneOrbital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PhilosophersGuonStone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AmmoFlower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ModdedGunsMagnet.png" />
+    <EmbeddedResource Include="Resources\ModdedItemsMagnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PastkillersPlan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\UnluckyDice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BigChamber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PokeBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RingOfAmmunition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ScrollOfWonder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CarBattery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SmartBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\KingBullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Party_Hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EbonstoneAmmolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Evo1Bullets.png" />
+    <EmbeddedResource Include="Resources\Evo2Bullets.png" />
+    <EmbeddedResource Include="Resources\Evo3Bullets.png" />
+    <EmbeddedResource Include="Resources\Evo4Bullets.png" />
+    <EmbeddedResource Include="Resources\Evo5Bullets.png" />
+    <EmbeddedResource Include="Resources\Evo6Bullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CrimstoneAmmolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PointlessJunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ArmorHeartFriendship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\StoneJunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ShelletahsHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FireworkRocket.png" />
+    <EmbeddedResource Include="Resources\Fireworks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Relodelode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ShieldOfGunkh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Underflow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\JunkArmor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TeslaCoil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PalmTree.png" />
+    <EmbeddedResource Include="Resources\PalmSapling.png" />
+    <EmbeddedResource Include="Resources\MahogunySapling.png" />
+    <EmbeddedResource Include="Resources\PeashooterSeeds.png" />
+    <EmbeddedResource Include="Resources\flatbullets.png" />
+    <EmbeddedResource Include="Resources\Magic_Beans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\YourselfBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CrownOfTheJammed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\rad_vfx_good_001.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_good_002.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_001.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_002.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_intro_001.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_intro_002.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_outro_001.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_outro_002.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_outro_003.png" />
+    <EmbeddedResource Include="Resources\rad_vfx_bad_outro_004.png" />
+    <EmbeddedResource Include="Resources\TableTechTableflip.png" />
+    <EmbeddedResource Include="Resources\TableTechChaos.png" />
+    <EmbeddedResource Include="Resources\RedChamber_idle_001.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_001.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_002.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_003.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_004.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_005.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_006.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_007.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_008.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_009.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_010.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_011.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_012.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_013.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_014.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_015.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_016.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_017.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_018.png" />
+    <EmbeddedResource Include="Resources\RedChamber_melt_019.png" />
+    <EmbeddedResource Include="Resources\SpreadAmmoChamber.png" />
+    <EmbeddedResource Include="Resources\WallEye.png" />
+    <EmbeddedResource Include="Resources\SpeedEffect.png" />
+    <EmbeddedResource Include="Resources\PlatformOfDeath.png" />
+    <EmbeddedResource Include="Resources\ShrineGorbIcon.png" />
+    <EmbeddedResource Include="Resources\ShrineReaperIcon.png" />
+    <EmbeddedResource Include="Resources\RainbowMimicRewardPedestal.png" />
+    <EmbeddedResource Include="Resources\ThisPedestalIsEmpty.png" />
+    <EmbeddedResource Include="Resources\RedirectBullets.png" />
+    <EmbeddedResource Include="Resources\SrineShapeshifter.png" />
+    <EmbeddedResource Include="Resources\ShrineAbsoluteRadiance.png" />
+    <EmbeddedResource Include="Resources\ShrinePrimalAspid.png" />
+    <EmbeddedResource Include="Resources\ShrineGorb.png" />
+    <EmbeddedResource Include="Resources\ShrineSreaperIcon.png" />
+    <EmbeddedResource Include="Resources\ShrinePedestal.png" />
+    <EmbeddedResource Include="Resources\ShrineReaper.png" />
+    <EmbeddedResource Include="Resources\ShrineSuperreaper.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_appear_001.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_appear_002.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_appear_003.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_appear_004.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_appear_005.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_break_001.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_break_002.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_break_003.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_break_004.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_idle_001.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_open_001.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_open_002.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_open_003.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_open_004.png" />
+    <EmbeddedResource Include="Resources\UglyChest\chest_ugly_open_005.png" />
+    <EmbeddedResource Include="Resources\ReallySpecialGramophone.png" />
+    <EmbeddedResource Include="Resources\Muscle.png" />
+    <EmbeddedResource Include="Resources\OcarinaOfTime.png" />
+    <EmbeddedResource Include="Resources\RoundKingItem.png" />
+    <EmbeddedResource Include="Resources\RoundKing\RoundKingJump1.png" />
+    <EmbeddedResource Include="Resources\RoundKing\RoundKingJump2.png" />
+    <EmbeddedResource Include="Resources\StraightBullets.png" />
+    <EmbeddedResource Include="Resources\djunkan_thonk.png" />
+    <EmbeddedResource Include="Resources\howtothrowbooks.png" />
+    <EmbeddedResource Include="Resources\CyberkineticSuperbattery.png" />
+    <EmbeddedResource Include="Resources\HappyJunk.png" />
+    <EmbeddedResource Include="Resources\GiantsPlaytoyllets.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\BlackGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\DarkGreenGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\DiamondGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\MagentaGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\PurpleGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\WoodenGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\HalfMirrorGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\GuonStrongOrbitals\PhilosophersGuonStrongOrbital.png" />
+    <EmbeddedResource Include="Resources\KaliberAffliction.png" />
+    <EmbeddedResource Include="Resources\GlassHeartbroken.png" />
+    <EmbeddedResource Include="Resources\AmmonomiconPortraitRainbowmimic.png" />
+    <EmbeddedResource Include="Resources\BossRainbowmimicIcon.png" />
+    <EmbeddedResource Include="Resources\Butterfly\butterfly_idle_left_001.png" />
+    <EmbeddedResource Include="Resources\Butterfly\butterfly_idle_left_002.png" />
+    <EmbeddedResource Include="Resources\Butterfly\butterfly_idle_left_003.png" />
+    <EmbeddedResource Include="Resources\ComfortableCarpet.png" />
+    <EmbeddedResource Include="Resources\hk_chained_001.png" />
+    <EmbeddedResource Include="Resources\NotificationIconShapeshifter.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_001.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_002.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_003.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_004.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_005.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_006.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_007.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_008.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_009.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_010.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_011.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_012.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_013.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_014.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_015.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_016.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_017.png" />
+    <EmbeddedResource Include="Resources\GreenChamberItem\GreenChamber_melt_018.png" />
+    <EmbeddedResource Include="Resources\BigPlatformOfDeath.png" />
+    <EmbeddedResource Include="Resources\BigPlatformOfDeathTop.png" />
+    <EmbeddedResource Include="Resources\MasterChamber.png" />
+    <EmbeddedResource Include="Resources\ArmorChamber.png" />
+    <EmbeddedResource Include="Resources\AmmoChamber.png" />
+    <EmbeddedResource Include="Resources\BlankChamber.png" />
+    <EmbeddedResource Include="Resources\HealthChamber.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_001.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_002.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_003.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_004.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_005.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_006.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_007.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_008.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_009.png" />
+    <EmbeddedResource Include="Resources\HeartChamber_melt_010.png" />
+    <EmbeddedResource Include="Resources\KeyChamber.png" />
+    <EmbeddedResource Include="Resources\InfluxBullets.png" />
+    <EmbeddedResource Include="Resources\IgnoreRounds.png" />
+    <Content Include="GungeonAPI\HalfHealthChamber.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_001.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_002.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_003.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_004.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_005.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_006.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_007.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_008.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_009.png" />
+    <Content Include="GungeonAPI\HalfHeartChamber_melt_010.png" />
+    <EmbeddedResource Include="Resources\HalfHealthChamber.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_001.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_002.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_003.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_004.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_005.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_006.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_007.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_008.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_009.png" />
+    <EmbeddedResource Include="Resources\HalfHeartChamber_melt_010.png" />
+    <Content Include="Resources\minigun2_idle_001.png" />
+    <EmbeddedResource Include="Resources\stand.png" />
+    <EmbeddedResource Include="Resources\MinigunStand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Rooms\Secret_RainbowmimicRoom.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Rooms\Room_ReaperShrine.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Rooms\Room_GorbShrine.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Rooms\Room_ComfortableCarpet.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Rooms\GreenChamberRoom_Part1.room" />
+    <EmbeddedResource Include="Resources\Rooms\GreenChamberRoom_Part2.room" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RedChamberRooms\RedChamber_Entrance.room" />
+    <EmbeddedResource Include="RedChamberRooms\RedChamber_Exit.room" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
